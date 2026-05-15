@@ -8,19 +8,25 @@
 </head>
 <body>
 
-    <h1>Генератор паролей</h1>
+    <div class="container">
 
-    <form method="POST">
-        <label>Длина пароля:</label>
-        <input type="number" name="length" value="10">
+        <h1>Генератор паролей</h1>
 
-        <button type="submit">Сгенерировать пароль</button>
-    </form>
+        <form method="POST">
+            <label>Длина пароля:</label>
+            <input type="number" name="length" value="10">
 
-    {% if password %}
-        <h2>Ваш пароль:</h2>
-        <p>{{ password }}</p>
-    {% endif %}
+            <button type="submit">Сгенерировать пароль</button>
+        </form>
+
+        {% if password %}
+            <div class="result">
+                <h2>Ваш пароль:</h2>
+                <p>{{ password }}</p>
+            </div>
+        {% endif %}
+
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор паролей</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <h1>Генератор паролей</h1>
+
+    <form method="POST">
+        <label>Длина пароля:</label>
+        <input type="number" name="length" value="10">
+
+        <button type="submit">Сгенерировать пароль</button>
+    </form>
+
+    {% if password %}
+        <h2>Ваш пароль:</h2>
+        <p>{{ password }}</p>
+    {% endif %}
+
+</body>
+</html>

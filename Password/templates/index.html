@@ -23,11 +23,17 @@
         {% if password %}
             <div class="result">
                 <h2>Ваш пароль:</h2>
-                <p>{{ password }}</p>
+                <p id="password" onclick="copyPassword()">
+        {{ password }}
+    </p>
+
+    <p id="copy-message" class="copy-message"></p>
             </div>
         {% endif %}
 
     </div>
+
+  <script src="/static/script.js"></script>
 
 </body>
 </html>
